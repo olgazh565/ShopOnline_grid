@@ -48,7 +48,7 @@
     align-self: end;
 }
 
-.book__caption_font-weight_regular {
+.book__caption-font-regular {
     font-size: 30px;
     font-weight: 400;
 }
@@ -109,7 +109,7 @@
     align-self: end;
 }
 
-.second-pair__caption_type_bold {
+.second-pair__caption-bold {
     font-size: 56px;
     font-weight: 700;
 }
@@ -230,7 +230,7 @@
         padding: 0 18px 28px 9px;
         line-height: 1;
     }
-    .book__caption_font-weight_regular {
+    .book__caption-font-regular {
         font-size: 24px;
     }
     .discount-time__link {
@@ -260,7 +260,7 @@
         padding: 29px 25px;
         line-height: 1.4;
     }
-    .second-pair__caption_type_bold {
+    .second-pair__caption-bold {
         font-size: 40px;
         line-height: 1.1;
     }
@@ -348,7 +348,7 @@
         padding: 20px 10px;
         line-height: 0.85;
     }
-    .book__caption_font-weight_regular {
+    .book__caption-font-regular {
         font-size: 20px;
     }
     .galery__item_type_discount-time {
@@ -378,7 +378,7 @@
         padding: 18px 28px 14px;
         border-radius: 12px;
     }
-    .second-pair__caption_type_bold {
+    .second-pair__caption-bold {
         font-size: 26px;
     }
     .galery__item_type_presents {
@@ -454,7 +454,7 @@
         padding: 10px 55px 10px 10px;
         line-height: 0.9;
     }
-    .book__caption_font-weight_regular {
+    .book__caption-font-regular {
         font-size: 12px;
     }
     .galery__item_type_discount-time {
@@ -486,7 +486,7 @@
         padding: 9px 25px;
         border-radius: 8px;
     }
-    .second-pair__caption_type_bold {
+    .second-pair__caption-bold {
         font-size: 16px;
     }
     .galery__item_type_presents {
