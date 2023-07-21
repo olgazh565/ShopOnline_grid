@@ -3,7 +3,16 @@
 // Считаем время до дедлайна
 
 const getTimeRemaining = (deadline) => {
-    const dateStop = new Date(deadline).getTime();
+    const dateStop = new Date(deadline);
+    console.log('dateStop: ', dateStop);
+
+    // отображаем время UTC +3
+    const stopHours = dateStop.getHours();
+    const offsetHours = -(dateStop.getTimezoneOffset() / 60);
+    const UTCHours = stopHours - offsetHours;
+    dateStop.setHours(UTCHours + 3);
+    console.log('dateStop: ', dateStop);
+
     const dateNow = Date.now();
     const timeLeft = dateStop - dateNow;
 
@@ -27,6 +36,10 @@ const declOfNum = (num, words) => words[
     (num % 100 > 4 && num % 100 < 20) ? 2 :
         [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]
 ];
+
+// Добавляем 0 к одиночным цифрам часа, минут, секунд
+
+const addZero = num => `0${num}`.slice(-2);
 
 // Создаем верстку
 
@@ -81,9 +94,9 @@ const timer = (deadline, elem) => {
         // отображаем значения таймера на странице
 
         timerCountDays.textContent = days;
-        timerCountHours.textContent = hours < 10 ? '0' + hours : hours;
-        timerCountMinutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-        timerCountSeconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        timerCountHours.textContent = addZero(hours);
+        timerCountMinutes.textContent = addZero(minutes);
+        timerCountSeconds.textContent = addZero(seconds);
 
         // отображение подписей таймера в нужном падеже
 
